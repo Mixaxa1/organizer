@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>OrganizerForm</class>
+ <widget class="QMainWindow" name="OrganizerForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>435</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Органайзер</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="2" column="1">
+     <spacer name="horizontalSpacer">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="0" column="0" rowspan="3">
+     <layout class="QGridLayout" name="left_panel">
+      <item row="0" column="1">
+       <widget class="QPushButton" name="pb_create">
+        <property name="text">
+         <string>Создать</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="lbl_all_records">
+        <property name="text">
+         <string>Все записи</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0" colspan="2">
+       <widget class="QTableWidget" name="tw_records">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <attribute name="horizontalHeaderVisible">
+         <bool>false</bool>
+        </attribute>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="0" column="1">
+     <layout class="QGridLayout" name="record"/>
+    </item>
+    <item row="1" column="1">
+     <spacer name="verticalSpacer">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="filters">
+    <property name="title">
+     <string>Записи</string>
+    </property>
+    <addaction name="filter_all"/>
+    <addaction name="filter_reminders"/>
+    <addaction name="filter_tasks"/>
+    <addaction name="filter_notes"/>
+   </widget>
+   <addaction name="filters"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="filter_all">
+   <property name="text">
+    <string>Все записи</string>
+   </property>
+  </action>
+  <action name="filter_reminders">
+   <property name="text">
+    <string>Напоминания</string>
+   </property>
+  </action>
+  <action name="filter_tasks">
+   <property name="text">
+    <string>Задачи</string>
+   </property>
+  </action>
+  <action name="filter_notes">
+   <property name="text">
+    <string>Заметки</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
